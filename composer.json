@@ -1,6 +1,6 @@
 {
     "name": "willian/pagseguro",
-    "description": "simplify pagseguro lib",
+    "description": "Pagseguro Laravel",
     "license": "GPL",
     "authors": [
         {
