@@ -1,0 +1,21 @@
+{
+    "name": "willian/pagseguro",
+    "description": "simplify pagseguro lib",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Willian C. Klein",
+            "email": "willian.empari@gmail.com"
+        }
+    ],
+    "autoload":{
+      "classmap":[],
+      "psr-4":{
+        "Nagahshi\\Pagseguro\\":"src/"
+      }
+    },
+    "require": {
+      "illuminate/support": "~5",
+      "illuminate/http": "~5"
+    }
+}
