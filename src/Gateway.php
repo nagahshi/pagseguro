@@ -151,9 +151,11 @@ class Gateway
       if($err) throw new \Exception($err, 1);
 
       $xml = simplexml_load_string($xml);
-      $id_client = $xml->reference;
-      $items = $xml->items;
-      return array('client_id'=>$id_client,'items'=>$xml->items);
+      $reference = (isset($xml->reference))?$xml->reference:'';
+      $items = (isset($xml->items))?$xml->items:'';
+      $status = (isset($xml->status))?$xml->status:'';
+      $link = (isset($xml->paymentLink))?$xml->paymentLink:'';
+      return array('reference'=>$reference,'items'=>$items,'status'=>$status,'link'=>$link);
     } catch (Exception $e) {
       abort(500,$e->getMessage());
     }
